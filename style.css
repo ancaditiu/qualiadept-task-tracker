@@ -1,0 +1,44 @@
+/* ============================================================
+ * Task Tracker - Stiluri CSS validate (Sesiunea 2)
+ * ============================================================ */
+
+/* 1. Meniu Flexibil (Flexbox) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #18181b;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #27272a;
+}
+
+#logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+/* 2. Selectori Structurali */
+tr:nth-child(3) {
+  background-color: #27272a;
+  font-weight: 600;
+}
+
+.delete-row {
+  color: #f43f5e;
+  border: 1px solid #e11d48;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* 3. Stări Dinamice */
+button:not(:disabled):hover {
+  background-color: #059669;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
