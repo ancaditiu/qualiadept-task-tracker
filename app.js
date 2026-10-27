@@ -114,3 +114,34 @@ butonDelete.addEventListener('input', (event) => {
   }
 });
 
+// ============================================================
+// Sesiunea 5: JS Asincron (Fetch API & Task-uri Active)
+// ============================================================
+// Cerințe Tehnice:
+// 1. Declară o Arrow Function asincronă:
+//    const incarcaTaskuriInitiale = async () => { ... };
+// 2. În interiorul funcției, apelează:
+//    const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=5');
+// 3. Despachetează răspunsul: const taskuri = await response.json();
+// 4. Selectează lista din HTML: const activeTasksList = document.querySelector('#active-tasks-list');
+// 5. Iterează prin taskuri (cu forEach sau for):
+//    - Creează dinamic un element <li> (document.createElement('li')).
+//    - Setează textul cu titlul task-ului (li.textContent = task.title).
+//    - Adaugă elementul în listă (activeTasksList.appendChild(li)).
+// 6. Apelează funcția la finalul fișierului: incarcaTaskuriInitiale();
+// ============================================================
+
+// Adaugă aici funcția asincronă incarcaTaskuriInitiale și apelarea ei:
+const incarcaTaskuriInitiale = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=5');
+  const taskuri = await response.json();
+  const activeTasksList = document.querySelector('#active-tasks-list');
+
+for(i = 0; i< taskuri.length; i++){
+  document.createElement("li");
+  li.textContent = task.title;
+  activeTasksList.appendChild(li)
+}
+ };
+
+incarcaTaskuriInitiale();
